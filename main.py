@@ -1,5 +1,7 @@
 from module import *
 import os
+import pandas
+import matplotlib.pyplot
 
 midi_list = []
 for root, dirs, files in os.walk("./melody", topdown=False):
@@ -11,7 +13,22 @@ music_list = []
 for midi in midi_list:
     music_list.append(midi2music(midi))
 
-for i, music in enumerate(music_list):
-    print('Music {}: Notes {}, Length {}'.format(i + 1, music.get_notes(), music.get_lengths()))
+music_list.sort(key=lambda music: music.get_notes())
 
+for i, music in enumerate(music_list):
+    print('Music {}: Notes {}, Length {}, Name {}'.format(i + 1, music.get_notes(), music.get_lengths(), music.name))
+
+# music_notes = []
+# for music in music_list:
+#     if music.get_notes()<= 1000:
+#         music_notes.append(int(music.get_notes()))
+
+music_lengths = []
+for music in music_list[:-10]:
+    if music.get_lengths() <= 800000:
+        music_lengths.append(int(music.get_lengths()/1000*0.67))
+
+data = pandas.Series(music_lengths)
+data.hist()
+matplotlib.pyplot.show()
 #print(midi_list)

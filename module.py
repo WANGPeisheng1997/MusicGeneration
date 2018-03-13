@@ -27,8 +27,10 @@ class Track:
 
 class Music:
 
-    def __init__(self):
+    def __init__(self, number=-1, name=""):
         self.tracks = []
+        self.number = number
+        self.name = name
 
     def add_track(self, track):
         try:
@@ -59,7 +61,7 @@ def transfer_note2pitch(note):
 
 def midi2music(file_name):
     midi = mido.MidiFile(file_name)
-    music = Music()
+    music = Music(name=file_name)
     track = Track()
 
     for msg in midi.tracks[0]:

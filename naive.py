@@ -8,32 +8,34 @@ def get_freq_dict(pitch=True,length=False):
     music_list = generate_music_list(midi_list)
     mat = {}
     fq = {}
+
     for music in music_list:
         if pitch and length:
-            last = 128,0
+            previous = 128,0
         elif pitch and not length:
-            last = 128
-        for line in str(music.get_single_track()).split("\n"):
+            previous = 128
+
+        track = music.get_single_track()
+        for each_pitch in track.get_pitch_list():
             try:
-                now = int(line.split()[3][:-1])
-                if last not in mat:
-                    mat[last]= {}
-                if now not in mat[last]:
-                    mat[last][now] = 0
-                mat[last][now] += 1
-                last = now
+                current = each_pitch
+                if previous not in mat:
+                    mat[previous]= {}
+                if current not in mat[previous]:
+                    mat[previous][current] = 0
+                mat[previous][current] += 1
+                previous = current
             except:
                 pass
-    for a in mat:
-        summ = sum(mat[a][b] for b in mat[a])
-        print(summ)
-        for b in mat[a]:
-            mat[a][b]/=summ
-        fq[a] = sorted(mat[a],key=lambda x:-mat[a][x])
-        print(mat[a])
-        print(fq[a])
-        if len(mat[a]) > 1:
-            break
+
+    for previous in mat:
+        sum_row = sum(mat[previous][current] for current in mat[previous])
+        for current in mat[previous]:
+            mat[previous][current] /= sum_row
+        fq[previous] = sorted(mat[previous],key=lambda x:-mat[previous][x])
+        #print(mat[previous])
+        print(previous, fq[previous])
+
     return mat,fq
 
 

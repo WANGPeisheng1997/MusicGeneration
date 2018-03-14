@@ -20,6 +20,21 @@ class Track:
             return_str += '\n'
         return return_str
 
+    def get_pitch_list(self):
+        return self.pitches
+
+    def get_length_list(self):
+        return self.lengths
+
+    def get_pitch_with_index(self, index):
+        return self.pitches[index]
+
+    def get_lengths_with_index(self, index):
+        return self.lengths[index]
+
+    def get_note_count(self):
+        return self.note_count
+
     def output_understandable_notes(self):
         for i in range(0, self.note_count):
             print('Note {}: Pitch {}, Length {}'.format(i, transfer_note2pitch(self.pitches[i]), self.lengths[i]/1024))
@@ -42,16 +57,16 @@ class Music:
     def get_single_track(self):
         return self.tracks[0]
 
-    def get_notes(self):
+    def get_total_notes(self):
         sum = 0
         for track in self.tracks:
-            sum += track.note_count
+            sum += track.get_note_count()
         return sum
 
-    def get_lengths(self):
+    def get_total_lengths(self):
         sum = 0
         for track in self.tracks:
-            for note in track.lengths:
+            for note in track.get_length_list():
                 sum += note
         return sum
 

@@ -47,7 +47,10 @@ def show_histogram_of_lengths(music_list, seconds=False):
     matplotlib.pyplot.show()
 
 if __name__ == '__main__':
-    midi_list = generate_midi_list()
-    music_list = generate_music_list(midi_list)
-    #show_histogram_of_lengths(music_list, seconds=True)
-    show_histogram_of_notes(music_list)
+    # midi_list = generate_midi_list()
+    # music_list = generate_music_list(midi_list)
+    # #show_histogram_of_lengths(music_list, seconds=True)
+    # show_histogram_of_notes(music_list)
+
+    midi = mido.MidiFile("new_music.mid")
+    midi.print_tracks()

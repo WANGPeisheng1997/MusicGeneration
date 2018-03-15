@@ -1,7 +1,7 @@
 from main import generate_midi_list, generate_music_list
-from module import Music, Track
+from module import Music, Track, music2midi
 import pickle
-
+import random
 
 def get_freq_dict(pitch=True,length=False):
     midi_list = generate_midi_list()
@@ -42,7 +42,20 @@ def get_freq_dict(pitch=True,length=False):
 def naive_short_music(mat,fq):
     return mat,fq
 
+def generate_random_number(a, b):
+    return int(random.random() * (b - a) + a)
 
 if __name__ == "__main__":
     mat,fq = get_freq_dict()
-    naive_short_music(mat, fq)
+    generate_music = Music()
+    track = Track()
+    generate_music.add_track(track)
+
+    current_note = 128
+    next_note = fq[128][generate_random_number(0,2)]
+    for i in range(0,30):
+        track.add_note(next_note, generate_random_number(1,5) * 512)
+        current_note = next_note
+        next_note = fq[current_note][generate_random_number(0,2)]
+
+    music2midi(generate_music, "new_music.mid")

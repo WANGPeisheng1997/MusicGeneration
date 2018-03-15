@@ -2,7 +2,36 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0a7eb516-eff1-4f90-a13e-ee55c64b6f3d" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/new_music.mid" afterPath="$PROJECT_DIR$/new_music.mid" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/naive_0.mid" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/naive_1.mid" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/naive_10.mid" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/naive_11.mid" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/naive_12.mid" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/naive_13.mid" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/naive_14.mid" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/naive_15.mid" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/naive_16.mid" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/naive_17.mid" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/naive_18.mid" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/naive_19.mid" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/naive_2.mid" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/naive_20.mid" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/naive_21.mid" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/naive_22.mid" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/naive_23.mid" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/naive_24.mid" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/naive_25.mid" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/naive_26.mid" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/naive_27.mid" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/naive_28.mid" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/naive_29.mid" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/naive_3.mid" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/naive_4.mid" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/naive_5.mid" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/naive_6.mid" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/naive_7.mid" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/naive_8.mid" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/naive_9.mid" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/naive.py" afterPath="$PROJECT_DIR$/naive.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -15,11 +44,11 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="main.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="main.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="213">
-              <caret line="22" column="0" lean-forward="true" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+            <state relative-caret-position="365">
+              <caret line="32" column="37" lean-forward="false" selection-start-line="32" selection-start-column="37" selection-end-line="32" selection-end-column="37" />
               <folding>
                 <element signature="e#0#20#0" expanded="true" />
               </folding>
@@ -27,11 +56,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="naive.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="naive.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/naive.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="416">
-              <caret line="86" column="25" lean-forward="false" selection-start-line="86" selection-start-column="25" selection-end-line="86" selection-end-column="25" />
+            <state relative-caret-position="98">
+              <caret line="75" column="25" lean-forward="true" selection-start-line="75" selection-start-column="25" selection-end-line="75" selection-end-column="25" />
               <folding>
                 <element signature="e#0#56#0" expanded="true" />
               </folding>
@@ -42,7 +71,7 @@
       <file leaf-file-name="module.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/module.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="480">
+            <state relative-caret-position="-997">
               <caret line="32" column="34" lean-forward="false" selection-start-line="32" selection-start-column="34" selection-end-line="32" selection-end-column="34" />
               <folding />
             </state>
@@ -345,19 +374,9 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/naive.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="416">
-          <caret line="86" column="25" lean-forward="false" selection-start-line="86" selection-start-column="25" selection-end-line="86" selection-end-column="25" />
-          <folding>
-            <element signature="e#0#56#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/module.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
+        <state relative-caret-position="-997">
           <caret line="32" column="34" lean-forward="false" selection-start-line="32" selection-start-column="34" selection-end-line="32" selection-end-column="34" />
           <folding />
         </state>
@@ -365,10 +384,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="213">
-          <caret line="22" column="0" lean-forward="true" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+        <state relative-caret-position="365">
+          <caret line="32" column="37" lean-forward="false" selection-start-line="32" selection-start-column="37" selection-end-line="32" selection-end-column="37" />
           <folding>
             <element signature="e#0#20#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/naive.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="98">
+          <caret line="75" column="25" lean-forward="true" selection-start-line="75" selection-start-column="25" selection-end-line="75" selection-end-column="25" />
+          <folding>
+            <element signature="e#0#56#0" expanded="true" />
           </folding>
         </state>
       </provider>

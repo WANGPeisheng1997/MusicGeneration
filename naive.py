@@ -66,16 +66,17 @@ def naive_generation():
 
     music2midi(generate_music, "new_music.mid")
 
-def naive_generation_with_time(file_name, random_range=10):
-    mat, fq = get_freq_dict(pitch=True, length=True)
+def naive_generation_with_time(fq, file_name, length):
+
     generate_music = Music()
     track = Track()
     generate_music.add_track(track)
 
+    random_range = generate_random_number(4,8)
     current_note = 128, 0
     max_len = len(fq[128, 0])
     next_note = fq[128, 0][generate_random_number(0, 5)]
-    for i in range(0, 32):
+    for i in range(0, length):
         track.add_note(next_note[0], next_note[1])
         current_note = next_note
         max_len = len(fq[current_note])
@@ -84,6 +85,7 @@ def naive_generation_with_time(file_name, random_range=10):
     music2midi(generate_music, file_name)
 
 if __name__ == "__main__":
+    mat, fq = get_freq_dict(pitch=True, length=True)
     for i in range(0,30):
-        name = "naive_" + str(i) + ".mid"
-        naive_generation_with_time(name, 10)
+        name = "./argument2to6len8/naive_" + str(i + 1) + ".mid"
+        naive_generation_with_time(fq, name, 8)

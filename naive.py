@@ -16,9 +16,13 @@ def get_freq_dict(pitch=True,length=False):
             previous = 128
 
         track = music.get_single_track()
-        for each_pitch in track.get_pitch_list():
+        note_count = track.get_note_count()
+        for i in range(0, note_count):
             try:
-                current = each_pitch
+                if pitch and length:
+                    current = track.get_pitch_with_index(i), track.get_lengths_with_index(i)
+                elif pitch and not length:
+                    current = track.get_pitch_with_index(i)
                 if previous not in mat:
                     mat[previous]= {}
                 if current not in mat[previous]:
@@ -45,17 +49,41 @@ def naive_short_music(mat,fq):
 def generate_random_number(a, b):
     return int(random.random() * (b - a) + a)
 
-if __name__ == "__main__":
-    mat,fq = get_freq_dict()
+def naive_generation():
+    mat, fq = get_freq_dict()
     generate_music = Music()
     track = Track()
     generate_music.add_track(track)
 
     current_note = 128
-    next_note = fq[128][generate_random_number(0,2)]
-    for i in range(0,30):
-        track.add_note(next_note, generate_random_number(1,5) * 512)
+    max_len = len(fq[128])
+    next_note = fq[128][generate_random_number(0, 5)]
+    for i in range(0, 30):
+        track.add_note(next_note, generate_random_number(1, 5) * 512)
         current_note = next_note
-        next_note = fq[current_note][generate_random_number(0,2)]
+        max_len = len(fq[current_note])
+        next_note = fq[current_note][generate_random_number(0, min(max_len, 3))]
 
     music2midi(generate_music, "new_music.mid")
+
+def naive_generation_with_time(file_name, random_range=10):
+    mat, fq = get_freq_dict(pitch=True, length=True)
+    generate_music = Music()
+    track = Track()
+    generate_music.add_track(track)
+
+    current_note = 128, 0
+    max_len = len(fq[128, 0])
+    next_note = fq[128, 0][generate_random_number(0, 5)]
+    for i in range(0, 32):
+        track.add_note(next_note[0], next_note[1])
+        current_note = next_note
+        max_len = len(fq[current_note])
+        next_note = fq[current_note][generate_random_number(0, min(max_len, random_range))]
+
+    music2midi(generate_music, file_name)
+
+if __name__ == "__main__":
+    for i in range(0,30):
+        name = "naive_" + str(i) + ".mid"
+        naive_generation_with_time(name, 10)

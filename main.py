@@ -52,5 +52,5 @@ if __name__ == '__main__':
     # #show_histogram_of_lengths(music_list, seconds=True)
     # show_histogram_of_notes(music_list)
 
-    midi = mido.MidiFile("new_music.mid")
+    midi = mido.MidiFile("./melody/ashover1.mid")
     midi.print_tracks()
